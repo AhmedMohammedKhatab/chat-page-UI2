@@ -206,7 +206,7 @@ main {
 .container {
   max-width: 500px;
   text-align: right;
-  transform: translateX(70%);
+  margin-left: 40%;
 }
 .container-left {
   max-width: 500px;
@@ -349,3 +349,31 @@ textarea {
 .send img{
   margin-right: 10px;
 }
+@media only screen and (max-width: 1024px) {
+  main {
+    grid-template-columns: 0.3fr 1fr 2fr;
+  }
+}
+@media only screen and (max-width: 844px) {
+  main {
+    grid-template-columns: 0.3fr 0.7fr 1fr;
+  }
+}
+@media only screen and (max-width: 720px) {
+  main {
+    grid-template-columns: 0.3fr 0.3fr 1fr;
+  }
+  .info, .meta {
+    display: none;
+  }
+  .conversations header h3 {
+    float: none;
+    display: none;
+  }
+  .msg {
+    float: none;
+    margin: 0;
+    text-align: center;
+    padding-top: 15px;
+  }
+ }
