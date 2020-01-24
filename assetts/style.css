@@ -1,0 +1,351 @@
+@font-face {
+  font-family: gotham-book;
+  src: url(./fonts/GothamBook.ttf);
+}
+@font-face {
+  font-family: gotham-medium;
+  src: url(./fonts/GothamMedium.ttf);
+}
+@font-face {
+  font-family: gotham-medium-italic;
+  src: url(./fonts/GothamMediumItalic.ttf);
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #EDEEEE; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #C6D3D5;
+  border-radius: 12px; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(176, 187, 189); 
+}
+body {
+  background-color: #f0f0f0;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+main {
+  display: grid;
+  grid-template-columns: 0.3fr 1fr 2.5fr;
+  height: 100vh;
+}
+/* sidebar style */
+.side-bar {
+  background-color: #48B0B8;
+  overflow: hidden;
+}
+.logo{
+  display: flex;
+  height: 10vh;
+  justify-content: center;
+}
+.logo img {
+  width: 50px;
+  margin-top: 20px;
+}
+.navigation {
+  height: 30vh;
+  margin-top: 20px;
+}
+.logout {
+  display: flex;
+  margin-top: 50vh;
+  justify-content: center;
+  align-content: center;
+  padding: 5px;
+}
+.logout img {
+  width: 30px;
+}
+.logout:hover {
+  background-color: rgba(255, 255, 255, .3);
+  cursor: pointer;
+}
+.side-bar ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+.side-bar ul li {
+  margin: 20px 0px;
+  padding: 5px;
+  transition: ease 0.5s;
+  display: flex;
+  justify-content: center;
+}
+.side-bar ul li:hover {
+  background-color: rgba(255, 255, 255, .3);
+}
+.side-bar ul a img {
+  margin: auto;
+  width: 40px;
+}
+.active {
+  background-color: rgba(255, 255, 255, .3);
+}
+/* conversations bar styling*/
+.conversations header {
+  background-color: #ABABAB;
+  color: white;
+  height: 10vh;
+  padding: 10px;
+}
+.conversations header h3 {
+  margin: 3vh 0px;
+  float: left;
+  font-family: gotham-medium;
+}
+.msg {
+  float: right;
+  margin: 3vh;
+}
+.msg img {
+  width: 30px;
+}
+#chat-heads {
+  height: 87vh;
+  overflow: auto;
+}
+.block {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 1px;
+  background-color: white;
+}
+#chat-heads .block:first-of-type {
+  background-color: #ecf2f2;
+}
+.date {
+  font-family: sans-serif;
+  font-size: 12px;
+  color: #aaa;
+}
+.missed {
+  background-color: #608B8C;
+  border-radius: 12px;
+  color: white;
+  text-align: center;
+}
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.name {
+  font-family: gotham-book;
+}
+.sender {
+  font-family: gotham-medium-italic;
+  font-size: 10px;
+}
+.last {
+  font-family: gotham-medium;
+  font-size: 10px;
+  opacity: .7;
+}
+/* chat box styling*/
+.chat-box header {
+  background-color: #5CB0B6;
+  color: white;
+  height: 10vh;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.chat-box header h3 {
+  font-family: gotham-medium;
+}
+.chat-box header ul {
+  justify-self: center;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+.chat-box header ul li {
+  margin-right: 15px;
+}
+.chat-box header ul li:hover {
+  cursor: pointer;
+  transform: scale(1.1,1.1);
+}
+.chat-box header ul li img {
+  width: 40px;
+  height: 30px;
+}
+.box {
+  height: 79vh;
+  background-color: white;
+  text-align: center;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.box strong {
+  text-align: center;
+  font-family: gotham-book;
+  font-size: 10px;
+}
+.box strong small {
+  font-family: gotham-medium-italic;
+  color: #aaa;
+  font-weight: 200;
+}
+.container {
+  max-width: 500px;
+  text-align: right;
+  transform: translateX(70%);
+}
+.container-left {
+  max-width: 500px;
+  text-align: left;
+  transform: translateX(30px);
+}
+.bubble {
+  margin: 20px;
+  margin-bottom: 0px;
+  border-radius: 15px;
+  background: #EDEEF8;
+  color: #5E6E70;
+  padding: 10px;
+  font-family: gotham-book;
+  position: relative;
+}
+.right {
+  text-align: left;
+}
+.right:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 7px solid #EDEEF8;
+  border-right: 7px solid transparent;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid #EDEEF8;
+  right: -10px;
+  bottom: 4px;
+}
+.right .title {
+  font-family: gotham-medium;
+  font-size: 10px;
+  font-weight: 700;
+}
+.calender, .note {
+  display: flex;
+  justify-content: flex-start;
+}
+.calender img {
+  width: 20px;
+  height: 20px;
+  margin: 10px;
+}
+.note img {
+  width: 20px;
+  height: 20px;
+  margin: 20px 10px;
+}
+.calender p {
+  font-size: 12px;
+}
+.status {
+  display: flex;
+  justify-content: space-between;
+  text-align: right;
+}
+.status img {
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
+}
+.status button {
+  border: none;
+  background-color: white;
+  border-radius: 12px;
+  color: #e88282;
+  width: 100px;
+}
+.status button img {
+  width: 20px;
+  height: 15px;
+  margin-right: 10px;
+}
+.sender-info {
+  margin: 20px;
+  margin-top: 0px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  font-family: gotham-book;
+}
+.left:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-right: 7px solid #EDEEF8;
+  border-left: 7px solid transparent;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid #EDEEF8;
+  left: -10px;
+  bottom: 4px;
+}
+.sender-avatar {
+  width: 30px;
+  height: 30px;
+  transform: translate(15px, -50px);
+}
+.reciever-avatar {
+  width: 30px;
+  height: 30px;
+  transform: translate(-10px, -50px);
+}
+.action {
+  height: 5vh;
+  width: 98%;
+  margin-top: 5px;
+  display: grid;
+  grid-template-columns: 30px 1fr 30px;
+  grid-gap: 10px;
+}
+.plus {
+  background-color: white;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+}
+.plus:hover {
+  cursor: pointer;
+  transform: scale(1.1, 1.1);
+}
+.plus img {
+  width: 15px;
+  height: 15px;
+  margin-top: 7.5px;
+}
+textarea {
+  width: 100%;
+  border: none;
+  border-radius: 12px;
+  resize: none;
+}
+.send:hover {
+  cursor: pointer;
+  transform: scale(1.1, 1.1);
+}
+.send img{
+  margin-right: 10px;
+}
